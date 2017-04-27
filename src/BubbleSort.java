@@ -9,28 +9,28 @@ public class BubbleSort {
 		// sort the array
 		BubbleSortAscendingOrder(unsortedIntArray);
 
-		for(int i = 0; i < unsortedIntArray.length; i++){
-			
-			System.out.print(unsortedIntArray[i] + ", ");
-		}
-		
+		for(int i = 0; i < unsortedIntArray.length; i++){	
+			System.out.print(unsortedIntArray[i] + " ");
+		}		
 	}
-	
+	// Sorts any integer array in ascending order. 
 	public static void BubbleSortAscendingOrder(int[] intArray){
-		int prev = 0;
+		int current = 0;
 		boolean changed = false;
 		do {
 			changed = false;
 			for(int i = 0; i< intArray.length-1; i++){
+				/* if current element is greater than the next 
+				 * element. then we swap the two elements
+				 * */
 				if(intArray[i] > intArray[i+1]){
-					prev = intArray[i];
+					current = intArray[i];
 					intArray[i] = intArray[i+1];
-					intArray[i+1] = prev;
+					intArray[i+1] = current;
 					changed = true; 
 				}
 			}			
 		}while(changed);
-
 	}
 
 }
